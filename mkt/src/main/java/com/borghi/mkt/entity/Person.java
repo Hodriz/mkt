@@ -10,17 +10,30 @@ public class Person {
     private int age;
     private char gender;
     private String cpf;
-    private Address address;
-    private List<String> personList =new ArrayList<String>();
+    private ArrayList<Address>addresses=new ArrayList<>();
+    private ArrayList<Product>products=new ArrayList<>();
 
-    public Person(Long id, String name, int age, char gender, String cpf, Address address, List<String> personList) {
+    public Person(Long id, String name, int age, char gender, String cpf, ArrayList<Address> addresses, ArrayList<Product> products) {
         this.id = id;
         this.name = name;
         this.age = age;
         this.gender = gender;
         this.cpf = cpf;
-        this.address = address;
-        this.personList = personList;
+        this.addresses = addresses;
+        this.products = products;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                ", gender=" + gender +
+                ", cpf='" + cpf + '\'' +
+                ", addresses=" + addresses +
+                ", products=" + products +
+                '}';
     }
 
     public Long getId() {
@@ -63,19 +76,19 @@ public class Person {
         this.cpf = cpf;
     }
 
-    public Address getAddress() {
-        return address;
+    public ArrayList<Address> getAddresses() {
+        return addresses;
     }
 
-    public void setAddress(Address address) {
-        this.address = address;
+    public void setAddresses(ArrayList<Address> addresses) {
+        this.addresses = addresses;
     }
 
-    public List<String> getPersonList() {
-        return personList;
+    public ArrayList<Product> getProducts() {
+        return products;
     }
 
-    public void setPersonList(List<String> personList) {
-        this.personList = personList;
+    public void setProducts(ArrayList<Product> products) {
+        this.products = products;
     }
 }
