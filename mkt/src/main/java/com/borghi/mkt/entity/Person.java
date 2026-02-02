@@ -1,7 +1,6 @@
 package com.borghi.mkt.entity;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Person {
 
@@ -13,15 +12,6 @@ public class Person {
     private ArrayList<Address>addresses=new ArrayList<>();
     private ArrayList<Product>products=new ArrayList<>();
 
-    public Person(Long id, String name, int age, char gender, String cpf, ArrayList<Address> addresses, ArrayList<Product> products) {
-        this.id = id;
-        this.name = name;
-        this.age = age;
-        this.gender = gender;
-        this.cpf = cpf;
-        this.addresses = addresses;
-        this.products = products;
-    }
 
     @Override
     public String toString() {
@@ -80,10 +70,6 @@ public class Person {
         return addresses;
     }
 
-    public void setAddresses(ArrayList<Address> addresses) {
-        this.addresses = addresses;
-    }
-
     public ArrayList<Product> getProducts() {
         return products;
     }
@@ -91,4 +77,9 @@ public class Person {
     public void setProducts(ArrayList<Product> products) {
         this.products = products;
     }
+
+    public void setAddresses(Address address) {
+    }
+
+
 }
