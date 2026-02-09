@@ -17,11 +17,16 @@ public class RegisterPerson {
     }
 
     public void addPerson(Person person) {
+
+        if(person.equals(null)||person.getName().isEmpty()||person.getName().isBlank()){
+        throw new IllegalArgumentException("Insira um passoa para salvar!!");
+        }
+
         personList.add(person);
     }
 
     public void delPerson(Long id) {
-        if (id == null || id < 0) {
+        if (id == null || id <= 0) {
             throw new IllegalArgumentException("id não pode ser igual a null e menor que zero");
         }
         Person person = findPersonById(id);

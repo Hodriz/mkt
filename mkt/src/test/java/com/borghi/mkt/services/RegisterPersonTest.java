@@ -67,7 +67,7 @@ class RegisterPersonTest {
     void addPerson() {
 
         ArrayList<Person> list = registerPerson.getPersonList();
-
+        Person personEmpty=new Person();
         registerPerson.addPerson(person1);
         assertTrue(list.contains(person1));
 
@@ -91,9 +91,6 @@ class RegisterPersonTest {
         person2.setId(2l);
         registerPerson.addPerson(person1);
         registerPerson.addPerson(person2);
-
-        ArrayList<Person>list =registerPerson.getPersonList();
-
         Person p=registerPerson.findPersonById(1L);
         assertSame(p, person1);
     }
