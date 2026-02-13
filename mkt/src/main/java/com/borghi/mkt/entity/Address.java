@@ -1,30 +1,19 @@
 package com.borghi.mkt.entity;
 
 public class Address {
+    private Long id;
     private String street;
     private String city;
     private int number;
     private String country;
     private String state;
 
-
-    @Override
-    public String toString() {
-        return "Address{" +
-                "street='" + street + '\'' +
-                ", city='" + city + '\'' +
-                ", number=" + number +
-                ", country='" + country + '\'' +
-                ", state='" + state + '\'' +
-                '}';
+    public Long getId() {
+        return id;
     }
 
-    public Address(String street, String city, int number, String country, String state) {
-        this.street = street;
-        this.city = city;
-        this.number = number;
-        this.country = country;
-        this.state = state;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getStreet() {
@@ -67,5 +56,24 @@ public class Address {
         this.state = state;
     }
 
+    public Address(Long id, String street, String city, int number, String country, String state) {
+        this.id = id;
+        this.street = street;
+        this.city = city;
+        this.number = number;
+        this.country = country;
+        this.state = state;
+    }
 
+    @Override
+    public String toString() {
+        return "Address{" +
+                "id=" + id +
+                ", street='" + street + '\'' +
+                ", city='" + city + '\'' +
+                ", number=" + number +
+                ", country='" + country + '\'' +
+                ", state='" + state + '\'' +
+                '}';
+    }
 }

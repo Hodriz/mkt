@@ -25,7 +25,7 @@ class RegisterLegalEntityTest {
          "Casa da Coxinha",
               "23.546.0001/01",
                     new ArrayList<>() {{
-                    add(new Address("Rua JK", "Marialva", 34, "Brasil", "Paraná"));
+                    add(new Address(1L,"Rua JK", "Marialva", 34, "Brasil", "Paraná"));
                 }}
         );
 
@@ -35,7 +35,7 @@ class RegisterLegalEntityTest {
                 "Shopping do Celular",
                 "33.522.0001/37",
                 new ArrayList<>() {{
-                    add(new Address("Rua Foice de Assis", "Campo Mourão", 2145, "Brasil", "Paraná"));
+                    add(new Address(1L,"Rua Foice de Assis", "Campo Mourão", 2145, "Brasil", "Paraná"));
                 }}
         );
 

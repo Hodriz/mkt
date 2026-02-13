@@ -22,7 +22,7 @@ class RegisterPersonTest {
 
         person1=new Person();
         person1.setName("Silvio Santos");
-        person1.setAddresses(new Address("Rua Getulio Vargas","Maringá",33,"Paraná","Brazil"));
+        person1.setAddresses(new Address(1L,"Rua Getulio Vargas","Maringá",33,"Paraná","Brazil"));
         person1.setAge(50);
         person1.setId(1L);
         person1.setCpf("064.568.216-56");
@@ -30,7 +30,7 @@ class RegisterPersonTest {
 
         person2=new Person();
         person2.setName("Michael Jackson");
-        person2.setAddresses(new Address("Rua Geraldo Geronimo","Paiçandu",54,"Paraná","Brazil"));
+        person2.setAddresses(new Address(2l,"Rua Geraldo Geronimo","Paiçandu",54,"Paraná","Brazil"));
         person2.setAge(65);
         person2.setId(2L);
         person2.setCpf("063.528.116-33");
